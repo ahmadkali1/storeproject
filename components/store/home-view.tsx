@@ -15,6 +15,8 @@ const categoryEdits = [
   { title: "Personal care", note: "A considered daily shelf", href: "/products?category=beauty", className: "category-clay" },
 ];
 
+const assetBasePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export function HomeView() {
   const { products, loading, error, retry } = useProducts();
   const recentlyViewed = useShopStore((state) => state.recentlyViewed);
@@ -41,7 +43,7 @@ export function HomeView() {
           <p className="hero-footnote"><PackageCheck /> Complimentary delivery from $100</p>
         </div>
         <div className="hero-image-wrap">
-          <img src="/northline-hero.png" alt="Black everyday accessories arranged on warm stone" />
+          <img src={`${assetBasePath}/northline-hero.png`} alt="Black everyday accessories arranged on warm stone" />
           <Link href="/products?category=womens-bags">The carry edit <ArrowRight /></Link>
         </div>
       </section>
