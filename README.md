@@ -4,7 +4,7 @@ NORTHLINE is a modern ecommerce frontend built with React and TypeScript. It foc
 
 The project includes a complete product browsing and purchase experience, from catalogue discovery and search to cart management, checkout, order confirmation, and account history.
 
-**Live demo:** [https://github.com/ahmadkali1/storeproject.git](https://github.com/ahmadkali1/storeproject.git)
+**Repository:** [github.com/ahmadkali1/storeproject](https://github.com/ahmadkali1/storeproject)
 
 ![NORTHLINE home page](docs/screenshots/home-desktop.jpg)
 
