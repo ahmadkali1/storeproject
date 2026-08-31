@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
 import { ProductDetailView } from "@/components/store/product-detail-view";
-import { getProduct } from "@/src/services/productsApi";
+import { getProduct, getProducts } from "@/src/services/productsApi";
 
 type ProductRouteProps = { params: Promise<{ id: string }> };
+
+export async function generateStaticParams() {
+  const data = await getProducts();
+  return data.products.map((product) => ({ id: String(product.id) }));
+}
 
 export async function generateMetadata({ params }: ProductRouteProps): Promise<Metadata> {
   const { id } = await params;
